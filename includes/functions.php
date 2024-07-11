@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 function base_url($slug = '') {
     return sprintf(
             "%s://%s/%s",
-            isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+            (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') ? 'https' : 'http',
             $_SERVER['HTTP_HOST'],
             $slug
     );
