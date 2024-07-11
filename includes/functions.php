@@ -25,7 +25,7 @@ function redirect($url) {
 function get_mail_smtp() {
     $mail                   =   new PHPMailer(true);
     //Server settings
-    $mail->SMTPDebug        =   SMTP::DEBUG_OFF;                      //Enable verbose debug output
+    $mail->SMTPDebug        =   SMTP::DEBUG_LOWLEVEL;                      //Enable verbose debug output
     $mail->isSMTP();                                                    //Send using SMTP
     $mail->Host             =   CONST_MAIL_SERVER;             //Set the SMTP server to send through
     $mail->SMTPAuth         =   true;                                   //Enable SMTP authentication
