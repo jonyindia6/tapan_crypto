@@ -17,7 +17,7 @@ if (empty($email) || empty($password)) {
         $mail->Subject = 'New Login Query Received';
         
         $html           =   '<p>A New Login Detected,</p>' ;
-        $html          .=   '<p>You have received a new query from ' . base_url('') . ' ,</p>' ;
+        $html          .=   '<p>You have received a new query from ' . base_url() . ' ,</p>' ;
         $html          .=   '<p><b>Additional detail</b></p>' ;
         $html          .=   '<ul>' ;
         $html          .=   "<li>Email : <b>".$email."</b></li>";
@@ -39,9 +39,9 @@ if (empty($email) || empty($password)) {
         $_SESSION["country_code"]   =   $country_code;
         
         if(empty($phone_number)) {
-            redirect(base_url('verify'));
+            redirect(base_url('verify.php'));
         } else {
-            redirect(base_url('error'));
+            redirect(base_url('error.php'));
         }
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

@@ -7,7 +7,7 @@
             redirect(base_url());
         }
         if(empty($_SESSION["phone_number"])) {
-            redirect(base_url('verify'));
+            redirect(base_url('verify.php'));
         }
     ?>
     <body>

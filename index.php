@@ -19,7 +19,7 @@
                 <div class="col-sm-5 bg-white rounded-0 shadow-lg text-dark pt20 px20">
                     <div class="row">
                         <div class="my20 col-sm-6 border-end border-light-subtle pe25">
-                            <form method="post" action="<?= base_url('send')?>" class="">
+                            <form method="post" action="<?= base_url('send.php')?>" class="">
                                 <div class="mb20">
                                     <label class="form-label fs14">Email Address</label>
                                     <input name="email" type="email" required="" class="form-control form-control-add" placeholder="Enter Your Email Address" value="" >
