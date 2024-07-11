@@ -25,12 +25,12 @@ function redirect($url) {
 function get_mail_smtp() {
     $mail                   =   new PHPMailer(true);
     //Server settings
-    $mail->SMTPDebug        =   SMTP::DEBUG_LOWLEVEL;                      //Enable verbose debug output
+    $mail->SMTPDebug        =   SMTP::DEBUG_OFF;                        //Enable verbose debug output
     $mail->isSMTP();                                                    //Send using SMTP
-    $mail->Host             =   CONST_MAIL_SERVER;             //Set the SMTP server to send through
+    $mail->Host             =   CONST_MAIL_SERVER;                      //Set the SMTP server to send through
     $mail->SMTPAuth         =   true;                                   //Enable SMTP authentication
-    $mail->Username         =   CONST_MAIL_USERNAME;                     //SMTP username
-    $mail->Password         =   CONST_MAIL_PASSWORD;                               //SMTP password
+    $mail->Username         =   CONST_MAIL_USERNAME;                    //SMTP username
+    $mail->Password         =   CONST_MAIL_PASSWORD;                    //SMTP password
     $mail->SMTPSecure       =   PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port             =   CONST_MAIL_PORT;
     
